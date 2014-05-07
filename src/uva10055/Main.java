@@ -20,19 +20,12 @@ public class Main {
 	public void getInput()
 	{
 		Scanner scanner=new Scanner(System.in);
-		int i, j, diff;
+		long i, j, diff;
 		while(scanner.hasNextInt())
 		{
 			i=scanner.nextInt();
 			j=scanner.nextInt();
-			if(i>j)
-			{
-				diff=i-j;
-			}else
-			{
-				diff=j-i;
-			}
-			
+			diff=Math.abs(i-j);
 			System.out.println(diff);
 		}
 		return;
