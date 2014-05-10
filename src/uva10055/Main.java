@@ -21,12 +21,22 @@ public class Main {
 	{
 		Scanner scanner=new Scanner(System.in);
 		long i, j, diff;
+		
 		while(scanner.hasNextInt())
 		{
-			i=scanner.nextInt();
-			j=scanner.nextInt();
-			diff=Math.abs(i-j);
+			i=scanner.nextLong();
+			j=scanner.nextLong();
+			
+			if(i>=j)
+			{
+				diff=i-j;
+				
+			}else
+			{
+				diff=j-i;
+			}
 			System.out.println(diff);
+			
 		}
 		return;
 	}
