@@ -10,10 +10,10 @@ options, but the Java option was added in 2001, then the C++11 option was added 
 
 This library has the java implementation of online contest problems
 
-##Website
+###Website
 
 * Uva Online Judge ([@Official Site](http://uva.onlinejudge.org/))
   
-##Project Contributor
+###Project Contributor
 
 * Dinesh Appavoo ([@DineshAppavoo](https://twitter.com/DineshAppavoo))
