@@ -19,7 +19,7 @@ public class Main {
 	public void getInput()
 	{
 		Scanner scanner=new Scanner(System.in);
-		int n, k=0, num, total=0, minBricks=0, moves;
+		int n, k=0, num, total=0, minBricks=0, serial=0;
 		int[] values;
 		
 		while(scanner.hasNextInt())
@@ -28,6 +28,7 @@ public class Main {
 			if(n==0)
 				break;
 			values=new int[n];
+			serial++;
 			for(int i=0;i<n;i++)
 			{
 				num=scanner.nextInt();
@@ -44,6 +45,7 @@ public class Main {
 			
 			minBricks=0;
 			total=0;
+			System.out.println("Set #"+serial);
 			System.out.println("The minimum number of moves is "+k);
 			k=0;
 
