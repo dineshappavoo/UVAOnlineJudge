@@ -47,6 +47,7 @@ public class Main {
 			total=0;
 			System.out.println("Set #"+serial);
 			System.out.println("The minimum number of moves is "+k+".");
+			System.out.println();
 			k=0;
 
 		}
