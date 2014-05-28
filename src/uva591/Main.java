@@ -45,6 +45,8 @@ public class Main {
 			minBricks=0;
 			total=0;
 			System.out.println("The minimum number of moves is "+k);
+			k=0;
+
 		}
 	}
 
