@@ -35,10 +35,10 @@ public class Main {
 			maxNum=0;
 			maxNumIndex=0;
 			finalOutput="";
-			
+
 			if(n==0)
 				break;
-			
+
 			for(int i=0;i<n;i++)
 			{
 				values[i]=scanner.nextInt();
@@ -69,13 +69,13 @@ public class Main {
 							int length2=str2.length();
 							if(length1<length2)
 							{
-								
-								maxNum=values[j];
-								maxNumIndex=j;
-								;
-								
-								
-							}else
+								if(Character.getNumericValue(str2.charAt(length2))<Character.getNumericValue(str1.charAt(0)))
+								{
+									maxNum=values[j];
+									maxNumIndex=j;
+								}
+
+							}else if(length1>length2)
 							{
 								int minLength=length2;
 								for(int k=0;k<minLength;k++)
@@ -91,6 +91,10 @@ public class Main {
 										maxNumIndex=j;
 									}
 								}
+							}else
+							{
+								maxNum=values[j];
+								maxNumIndex=j;
 							}
 						}
 					}
