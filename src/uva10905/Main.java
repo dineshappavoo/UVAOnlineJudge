@@ -23,6 +23,7 @@ public class Main {
 		int n, maxNum, maxNumIndex, arrayCurrentSize;
 		int[] values;
 		boolean[] markedValues;
+		boolean failed=false;
 		String finalOutput;
 
 		while(scanner.hasNextInt())
@@ -69,14 +70,32 @@ public class Main {
 							int length2=str2.length();
 							if(length1<length2)
 							{
-								if(Character.getNumericValue(str2.charAt(length2))<Character.getNumericValue(str1.charAt(0)))
+								failed=false;
+								int minLength1=length1;
+								for(int k=0;k<minLength1;k++)
 								{
-									maxNum=values[j];
-									maxNumIndex=j;
+									if(Character.getNumericValue(str1.charAt(k))>Character.getNumericValue(str2.charAt(k)))
+									{
+										maxNum=values[j];
+										maxNumIndex=j;
+										//values[j]=-1;
+										failed=true;
+									}
+
+								}
+
+								if(!failed)
+								{
+									if(Character.getNumericValue(str2.charAt(length2-1))<Character.getNumericValue(str1.charAt(0)))
+									{
+										maxNum=values[j];
+										maxNumIndex=j;
+									}
 								}
 
 							}else if(length1>length2)
 							{
+								failed=false;
 								int minLength=length2;
 								for(int k=0;k<minLength;k++)
 								{
@@ -85,12 +104,19 @@ public class Main {
 										maxNum=values[j];
 										maxNumIndex=j;
 										//values[j]=-1;
-									}else if(Character.getNumericValue(str1.charAt(k))==Character.getNumericValue(str2.charAt(k)))
+										failed=true;
+									}
+								}
+								if(!failed)
+								{
+									if(Character.getNumericValue(str1.charAt(length1-1))>Character.getNumericValue(str2.charAt(0)))
 									{
 										maxNum=values[j];
 										maxNumIndex=j;
 									}
 								}
+								
+								
 							}else
 							{
 								maxNum=values[j];
