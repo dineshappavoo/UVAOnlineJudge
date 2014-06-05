@@ -59,7 +59,6 @@ public class Main {
 						if(firstDigit>firstDigitMaxNum)
 						{
 							maxNum=values[j];
-							//values[j]=-1;
 							maxNumIndex=j;
 						}else if(firstDigit==firstDigitMaxNum)
 						{
@@ -78,7 +77,6 @@ public class Main {
 									{
 										maxNum=values[j];
 										maxNumIndex=j;
-										//values[j]=-1;
 										failed=true;
 									}
 
@@ -103,7 +101,6 @@ public class Main {
 									{
 										maxNum=values[j];
 										maxNumIndex=j;
-										//values[j]=-1;
 										failed=true;
 									}
 								}
